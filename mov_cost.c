@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 14:22:51 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/06 14:44:57 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:23:53 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,28 @@ void	how_much(t_stack **stack_a, t_stack **stack_b)
 	}
 }
 
+/*
+	Find chipest move to put in destination position 'a' an 
+	element in stack 'b'
+*/
+void	find_chipest_move(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack	*tmp;
+	int		cheapest;
+	int		cost_a;
+	int		cost_b;
+
+	tmp = *stack_b;
+	cheapest = 2147483647;
+	while (tmp)
+	{
+		if (nbr_abs(tmp->cost_a) + nbr_abs(tmp->cost_b) < nbr_abs(cheapest))
+		{
+			cheapest = nbr_abs(tmp->cost_b) + nbr_abs(tmp->cost_a);
+			cost_a = tmp->cost_a;
+			cost_b = tmp->cost_b;
+		}
+		tmp = tmp->next;
+	}
+	
+}
