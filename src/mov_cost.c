@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 14:22:51 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/06 17:23:53 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:19:57 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,5 @@ void	find_chipest_move(t_stack **stack_a, t_stack **stack_b)
 		}
 		tmp = tmp->next;
 	}
-	
+	move(stack_a, stack_b, cost_a, cost_b);
 }

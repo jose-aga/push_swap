@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:18:19 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/06 22:38:11 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/07 09:13:26 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ long int	ft_atoi(const char *str)
 		nbr = (nbr * 10) + (str[i] - '0');
 		i++;
 	}
-	return (nbr * sign)
+	return (nbr * sign);
 }
 
 /*
@@ -84,4 +84,3 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
-

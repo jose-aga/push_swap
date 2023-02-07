@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:33:49 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/06 11:46:13 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/07 10:32:33 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void stack_add_bottom(t_stack **stack, t_stack *new)
 		*stack = new;
 		return ;
 	}
-	tail = 
+	tail = get_last_element(*stack);
 	tail->next = new;
 }
 

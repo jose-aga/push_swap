@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:33:48 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/06 22:40:04 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:21:22 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,13 @@ int	input_is_ok(char **av);
 int	nbr_abs(int nbr);
 
 /*
+	Auxiliary functions
+*/
+
+long int	ft_atoi(const char *str);
+void		ft_putstr(char *str);
+
+/*
 	Stacks operations
 */
 
@@ -57,6 +64,7 @@ void	assign_idx(t_stack *stack_a, int stack_size);
 */
 
 void	error_free_exit(t_stack **stack_a, t_stack **stack_b);
+void	free_stack(t_stack **stack);
 
 /*
 	Index
@@ -88,7 +96,26 @@ void	ft_rrr(t_stack **stack_a, t_stack **stack_b);
 */
 
 void	small_sort(t_stack **stack);
+void    sort(t_stack **stack_a, t_stack **stack_b);
 void	ft_pa(t_stack **stack_a, t_stack **stack_b);
 void	ft_pb(t_stack **stack_a, t_stack **stack_b);
+void	move(t_stack **a, t_stack **b, int cost_a, int cost_b);
+void	send(t_stack **src, t_stack **des);
+
+/*
+	Position
+*/
+
+void	get_pos(t_stack **stack);
+int	get_low_idx_pos(t_stack **stack);
+int	get_target(t_stack **a, int b_idx, int target_idx, int dest_pos);
+void	get_target_pos(t_stack **a, t_stack **b);
+
+/*
+	Cost of moving
+*/
+
+void	how_much(t_stack **stack_a, t_stack **stack_b);
+void	find_chipest_move(t_stack **stack_a, t_stack **stack_b);
 
 #endif

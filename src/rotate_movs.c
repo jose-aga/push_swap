@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 12:57:12 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/06 13:07:07 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/07 09:15:29 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	rotate(t_stack **stack)
 void	ft_ra(t_stack **stack_a)
 {
 	rotate(stack_a);
-	ft_putchar_fd("ra\n", 1);
+	ft_putstr("ra\n");
 }
 
 /*
@@ -44,7 +44,7 @@ void	ft_ra(t_stack **stack_a)
 void	ft_rb(t_stack **stack_b)
 {
 	rotate(stack_b);
-	ft_putchar_fd("rb\n", 1);
+	ft_putstr("rb\n");
 }
 
 /*
@@ -55,5 +55,5 @@ void	ft_rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	ft_putchar_fd("rr\n", 1);
+	ft_putstr("rr\n");
 }

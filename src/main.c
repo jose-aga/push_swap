@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 11:31:04 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/06 22:30:14 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/07 09:05:40 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ int	stack_is_sorted(t_stack *stack)
 	Choose the best sorting method depending on the number
 	of input values
 */
-static void	push_swap(t_stack **stack_a, t_stack **stacl_b, int stack_size)
+static void	push_swap(t_stack **stack_a, t_stack **stack_b, int stack_size)
 {
 	if (stack_size == 2 && !stack_is_sorted(*stack_a))
 		ft_sa(stack_a);
 	else if (stack_size == 3)
 		small_sort(stack_a);
 	else if (stack_size > 3 && !stack_is_sorted(*stack_a))
-		
+		sort(stack_a, stack_b);
 }
 
 int	main(int argc, char **argv)
@@ -55,6 +55,7 @@ int	main(int argc, char **argv)
 	stack_size = get_stack_size(stack_a);
 	assign_idx(stack_a, stack_size + 1);
 	push_swap(&stack_a, &stack_b, stack_size);
-	
-
+	free_stack(&stack_a);
+	free_stack(&stack_b);
+	return (0);
 }

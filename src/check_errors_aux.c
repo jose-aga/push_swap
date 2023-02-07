@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 08:46:29 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/02 10:15:58 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/07 08:02:33 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,3 @@ int	plus_number(const char *s1, const char *s2)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[j]);
 }
-
