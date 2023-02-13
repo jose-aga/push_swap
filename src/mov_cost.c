@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 14:22:51 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 11:19:57 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:05:03 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 */
 void	how_much(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *tmp_a;
-	t_stack *tmp_b;
+	t_stack	*tmp_a;
+	t_stack	*tmp_b;
 	int		size_a;
 	int		size_b;
 

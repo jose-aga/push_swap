@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:18:19 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 09:13:26 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:03:57 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 */
 void	free_stack(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (!stack || !(*stack))
 		return ;

@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:49:29 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 11:11:58 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:04:40 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 	Reverse rotates both stacks until one of them is in position
 */
-void ft_rev_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
+void	ft_rev_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 {
 	while (*cost_a < 0 && *cost_b < 0)
 	{
@@ -28,7 +28,7 @@ void ft_rev_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 /*
 	Rotate both stacks until one of them is in position	
 */
-void ft_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
+void	ft_rotate_both(t_stack **a, t_stack **b, int *cost_a, int *cost_b)
 {
 	while (*cost_a > 0 && *cost_b > 0)
 	{

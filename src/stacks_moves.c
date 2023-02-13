@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:33:49 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 10:32:33 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:15:04 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 /*
 	Add elements at stack's bottom
 */
-void stack_add_bottom(t_stack **stack, t_stack *new)
+void	stack_add_bottom(t_stack **stack, t_stack *new)
 {
-	t_stack *tail;
+	t_stack	*tail;
 
 	if (!new)
 		return ;

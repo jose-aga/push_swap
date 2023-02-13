@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:04:36 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 11:17:11 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:05:19 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 */
 void	send(t_stack **src, t_stack **des)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (*src == NULL)
 		return ;

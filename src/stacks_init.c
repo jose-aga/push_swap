@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:26:15 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 10:29:17 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:14:40 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ t_stack	*fill_stack(int ac, char **av)
 /*
 	Create stack elements
 */
-t_stack *stack_new(int s)
+t_stack	*stack_new(int s)
 {
-	t_stack *new;
+	t_stack	*new;
 
 	new = malloc(sizeof * new);
 	if (!new)
@@ -63,8 +63,8 @@ t_stack *stack_new(int s)
 */
 void	assign_idx(t_stack *stack_a, int stack_size)
 {
-	t_stack *ptr;
-	t_stack *maxvalue;
+	t_stack	*ptr;
+	t_stack	*maxvalue;
 	int		value;
 
 	while (--stack_size > 0)

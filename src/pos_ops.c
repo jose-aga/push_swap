@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:03:16 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 08:15:03 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:05:51 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 */
 void	get_pos(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	int		i;
 
 	tmp = *stack;
@@ -36,7 +36,7 @@ void	get_pos(t_stack **stack)
 */
 int	get_low_idx_pos(t_stack **stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 	int		low_idx;
 	int		low_pos;
 
@@ -62,7 +62,7 @@ int	get_low_idx_pos(t_stack **stack)
 */
 int	get_target(t_stack **a, int b_idx, int target_idx, int dest_pos)
 {
-	t_stack *tmp_a;
+	t_stack	*tmp_a;
 
 	tmp_a = *a;
 	while (tmp_a)
@@ -94,7 +94,7 @@ int	get_target(t_stack **a, int b_idx, int target_idx, int dest_pos)
 */
 void	get_target_pos(t_stack **a, t_stack **b)
 {
-	t_stack *tmp_b;
+	t_stack	*tmp_b;
 	int		dest_pos;
 
 	tmp_b = *b;

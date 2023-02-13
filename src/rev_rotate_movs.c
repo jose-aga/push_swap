@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 13:10:23 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 09:14:20 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:06:06 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 */
 void	rev_rotate(t_stack **stack)
 {
-	t_stack *tmp;
-	t_stack *tail;
-	t_stack *penultimate;
+	t_stack	*tmp;
+	t_stack	*tail;
+	t_stack	*penultimate;
 
 	tail = get_last_element(*stack);
 	penultimate = get_penultimate_element(*stack);
