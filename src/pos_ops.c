@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 20:03:16 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/13 13:05:51 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/02/27 12:36:42 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,28 +60,28 @@ int	get_low_idx_pos(t_stack **stack)
 	Best target position in 'a' for the index of the 
 	element in 'b'
 */
-int	get_target(t_stack **a, int b_idx, int target_idx, int dest_pos)
+int	get_tget(t_stack **a, int b_idx, int t_idx, int dest_pos)
 {
 	t_stack	*tmp_a;
 
 	tmp_a = *a;
 	while (tmp_a)
 	{
-		if (tmp_a->idx > b_idx && tmp_a->idx < target_idx)
+		if (tmp_a->idx > b_idx && tmp_a->idx < t_idx)
 		{
-			target_idx = tmp_a->idx;
+			t_idx = tmp_a->idx;
 			dest_pos = tmp_a->position;
 		}
 		tmp_a = tmp_a->next;
 	}
-	if (target_idx != 2147483647)
+	if (t_idx != 2147483647)
 		return (dest_pos);
 	tmp_a = *a;
 	while (tmp_a)
 	{
-		if (tmp_a->idx < target_idx)
+		if (tmp_a->idx < t_idx)
 		{
-			target_idx = tmp_a->idx;
+			t_idx = tmp_a->idx;
 			dest_pos = tmp_a->position;
 		}
 		tmp_a = tmp_a->next;
@@ -103,7 +103,7 @@ void	get_target_pos(t_stack **a, t_stack **b)
 	dest_pos = 0;
 	while (tmp_b)
 	{
-		dest_pos = get_target(a, tmp_b->idx, 2147483647, dest_pos);
+		dest_pos = get_tget(a, tmp_b->idx, 2147483647, dest_pos);
 		tmp_b->dest_pos = dest_pos;
 		tmp_b = tmp_b->next;
 	}
