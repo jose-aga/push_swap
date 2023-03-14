@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 13:48:24 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/02 09:54:02 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/03/13 10:59:04 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	check_twins(char **av)
 	int	i;
 	int	j;
 
-	i = 1;
+	i = 0;
 	while (av[i])
 	{
 		j = 1;
@@ -75,13 +75,13 @@ static int	nbr_is_zero(char *av)
 */
 int	input_is_ok(char **av)
 {
-	int	i;
-	int	zeros;
+	int		i;
+	int		zeros;
 
 	zeros = 0;
-	i = 1;
+	i = 0;
 	while (av[i])
-	{
+	{	
 		if (!argv_is_nbr(av[i]))
 			return (0);
 		zeros += nbr_is_zero(av[i]);

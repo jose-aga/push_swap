@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 10:26:15 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/13 13:14:40 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/03/13 11:07:36 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,16 @@ t_stack	*fill_stack(int ac, char **av)
 	long int	nbr;
 	int			i;
 
+	(void) ac;
 	stack_a = NULL;
 	nbr = 0;
-	i = 1;
-	while (i < ac)
+	i = 0;
+	while (av[i])
 	{
 		nbr = ft_atoi(av[i]);
 		if (nbr > 2147483647 || nbr < -2147483648)
 			error_free_exit(&stack_a, NULL);
-		if (i == 1)
+		if (i == 0)
 			stack_a = stack_new((int)nbr);
 		else
 			stack_add_bottom(&stack_a, stack_new((int)nbr));

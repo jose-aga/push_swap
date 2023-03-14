@@ -6,7 +6,7 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:33:48 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/27 12:35:56 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/03/13 11:17:42 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int					nbr_abs(int nbr);
 
 long int			ft_atoi(const char *str);
 void				ft_putstr(char *str);
+char				**ft_split(char const *s, char c);
 
 /*
 	Stacks operations

@@ -6,11 +6,11 @@
 /*   By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 11:31:04 by jose-aga          #+#    #+#             */
-/*   Updated: 2023/02/07 09:05:40 by jose-aga         ###   ########.fr       */
+/*   Updated: 2023/03/14 09:29:04 by jose-aga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <push_swap.h>
 
 /*
 	Check if a provided stack is sorted
@@ -45,13 +45,22 @@ int	main(int argc, char **argv)
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	int		stack_size;
+	char	**nbrs;
 
 	if (argc < 2)
 		return (0);
-	if (!input_is_ok(argv))
+	if (argc == 2)
+	{
+		nbrs = ft_split(argv[1], ' ');
+		if (!nbrs)
+			return (free(nbrs), 0);
+	}
+	else
+		nbrs = &argv[1];
+	if (!input_is_ok(nbrs))
 		error_free_exit(NULL, NULL);
 	stack_b = NULL;
-	stack_a = fill_stack(argc, argv);
+	stack_a = fill_stack(argc, nbrs);
 	stack_size = get_stack_size(stack_a);
 	assign_idx(stack_a, stack_size + 1);
 	push_swap(&stack_a, &stack_b, stack_size);

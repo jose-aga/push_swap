@@ -6,7 +6,7 @@
 #    By: jose-aga <jose-aga@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/13 10:24:15 by jose-aga          #+#    #+#              #
-#    Updated: 2023/02/13 12:09:15 by jose-aga         ###   ########.fr        #
+#    Updated: 2023/03/13 11:39:18 by jose-aga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,16 @@ SRC		= main.c \
 		ft_move.c move.c mov_cost.c errors.c \
 		pos_ops.c rev_rotate_movs.c \
 		rotate_movs.c sort_method.c sort_movs.c \
-		stacks_init.c stacks_moves.c
+		stacks_init.c stacks_moves.c ft_split.c
+
 SRCS	= $(addprefix $(SRC_PATH), $(SRC))
 OBJ		= $(SRC:.c=.o)
 OBJS	= $(addprefix $(OBJ_PATH), $(OBJ))
 INCS	= -I ./includes/
+
+ifdef D
+	CFLAGS += -g
+endif
 
 all: $(OBJ_PATH) $(NAME) 
 
